@@ -5,7 +5,9 @@
 	> Created Time: 2019年06月19日 星期三 19时43分06秒
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 const int MAX_NUM = 1001;
 
@@ -16,24 +18,33 @@ int main(void)
     int K = 0;
     int x = 0;
     int y = 0;
-    int array[MAX_NUM][MAX_NUM];
+    vector<int> path[MAX_NUM];
        
     cin >> N >> M >> K;
     
-//     for (int i=0; i<M; i++)
-//     {
-//         cin >> x >> y;
-//         array[x][y] = 1;
-//     }
+    for (int i=0; i<M; i++)
+    {
+        cin >> x >> y;
+        path[x].push_back(y);
+    }
+    
+    for (int i=0; i<K; i++)
+    {
+//         cin >> 
+    }
     
     for (int i=0; i<N; i++)
     {
-        for (int j=0; j<N; j++)
+        for (int j=0; j<path[i].size(); j++)
         {
-//             cout << array[i][j] << " ";
-
+            cout << path[i].at(j) << " ";
         }
         cout << endl;
+    }
+    
+    for (int i=0; i<K; i++)
+    {
+        cout << " " << endl;
     }
     
     return 0;
