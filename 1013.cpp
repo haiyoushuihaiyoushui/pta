@@ -18,6 +18,7 @@ int main(void)
     int K = 0;
     int x = 0;
     int y = 0;
+    int cat = 0;
     vector<int> path[MAX_NUM];
        
     cin >> N >> M >> K;
@@ -30,22 +31,18 @@ int main(void)
     
     for (int i=0; i<K; i++)
     {
-//         cin >> 
+        cin >> cat;
     }
-    
+    cout << "START" << endl;
     for (int i=0; i<N; i++)
     {
         for (int j=0; j<path[i].size(); j++)
         {
-            cout << path[i].at(j) << " ";
+            cout << i << " " << path[i].at(j) << endl;
         }
         cout << endl;
     }
     
-    for (int i=0; i<K; i++)
-    {
-        cout << " " << endl;
-    }
     
     return 0;
 }
